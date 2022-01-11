@@ -1,0 +1,65 @@
+body{
+    background-attachment: fixed;
+    background-size: cover;
+    background-image:url("https://static.scientificamerican.com/sciam/cache/file/8B819851-2DAD-4B3D-AF5270EACE5A5361_source.jpg?w=590&h=800&4F27CC97-4819-4142-B97585EF39DC1761")
+}
+.game{
+    width: 580px;
+    height: 500px;
+    border: 1px dotted;
+}
+.player{
+    background-color:cornflowerblue;
+    transform: translateY(220px);
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+body:active .player{
+    animation-play-state: running;
+}
+.enemy{
+    background-color:orangered;
+}
+.e1{
+    animation-name:bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.e2{
+    animation-name:bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.e3{
+    animation-name:bounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+}
+.box{
+    height: 50px;
+    width: 50px;
+    border: 1px solid;
+    display: inline-block;
+    margin-left:70px;
+}
+
+@keyframes bounce{
+    50%{
+        transform: translateY(450px);
+    }
+}
+
+@keyframes move{
+    50%{
+        transform: translateY(225px) translateX(450px);
+    }
+}
+h1{
+    text-align: center;
+    color:rgb(61, 208, 31);
+    text-shadow: 0 0 3px #d01c43;
+}
